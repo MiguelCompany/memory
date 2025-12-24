@@ -40,7 +40,7 @@ namespace foonathan
 #define FOONATHAN_MEMORY_ASSERT_RETURN(Expr, Ret)                                                  \
     ((Expr) ? (Ret)                                                                                \
             : (detail::handle_failed_assert("Assertion \"" #Expr "\" failed", __FILE__,            \
-                                            __LINE__, __func__),                                   \
+                                            __LINE__, "some constexpr"),                           \
                (Ret)))
 
 #define FOONATHAN_MEMORY_UNREACHABLE(Msg)                                                          \
